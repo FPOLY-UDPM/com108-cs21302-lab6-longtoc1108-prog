@@ -9,5 +9,30 @@
 //  Output: Xuất ra màn hình ma trận bình phương 
 
 // VIẾT CODE Ở ĐÂY
+#include <stdio.h>
 
+int main() {
+    int n, m;
+    printf("Nhập số hàng của ma trận: ");
+    scanf("%d", &n);
+    printf("Nhập số cột của ma trận: ");
+    scanf("%d", &m);
+    int matrix[n][m];
+    printf("Nhập các phần tử của ma trận:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    printf("Ma trận sau khi tính bình phương các phần tử:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            matrix[i][j] = matrix[i][j] * matrix[i][j];
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 
